@@ -10,6 +10,9 @@ Bundle 'Command-T'
 Bundle 'twilight'
 Bundle 'twilight256.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'The-NERD-tree'
+nmap <silent> <F2> :NERDTreeToggle<cr>
+nmap <silent> <Leader>r :NERDTreeFind<cr>
 
 " Tabs and spaces stuff.
 set shiftwidth=2
@@ -23,6 +26,9 @@ set incsearch  " increment search
 " Hide buffers instead of closing them.
 set hidden
 
+" Don't wrap lines. I don't like it.
+set nowrap
+
 " Indenting.
 set autoindent
 
@@ -34,10 +40,7 @@ set nobackup
 set nowritebackup
 
 " Show line numbers.
-set number
-
-" Auto change working directory to actual file.
-set autochdir
+" set number
 
 " Terminal colorscheme
 set t_Co=256  " Force 256 colors
