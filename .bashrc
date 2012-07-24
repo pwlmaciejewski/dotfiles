@@ -37,3 +37,4 @@ bws autocomplete
 
 # Aliases
 alias reload='source ~/.bashrc'
+alias sublime='sublime-text'

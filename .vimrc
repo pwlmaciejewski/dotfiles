@@ -39,9 +39,6 @@ set mouse=a
 set nobackup
 set nowritebackup
 
-" Show line numbers.
-" set number
-
 " Terminal colorscheme
 set t_Co=256  " Force 256 colors
 colorscheme twilight256
