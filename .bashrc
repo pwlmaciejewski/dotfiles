@@ -32,9 +32,15 @@ alias egrep='egrep --color=auto'
 PS1='\W$ '
 
 # Scripts
-alias bws='source ~/scripts/workspace.sh'
+alias bws='source ~/dotfiles/scripts/workspace.sh'
 bws autocomplete
 
 # Aliases
+alias du='du --apparent-size -h'
 alias reload='source ~/.bashrc'
 alias sublime='sublime-text'
+
+# Local aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
