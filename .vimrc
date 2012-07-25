@@ -19,6 +19,10 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
+" Folding.
+set foldmethod=indent  " Oops, Need to tidy up my files
+set foldlevelstart=9999
+
 " Search
 set hlsearch  " highlight results
 set incsearch  " increment search
