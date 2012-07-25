@@ -21,19 +21,26 @@ function install {
 }
 
 # Install rc files
-install ${DIR}/.bashrc ${HOME}/.bashrc
-install ${DIR}/.vimrc ${HOME}/.vimrc
+install ${DIR}/.bashrc ~/.bashrc
+install ${DIR}/.vimrc ~/.vimrc
 
 # Backup & create bash_aliases
-backup ${HOME}/.bash_aliases
-$(touch ${HOME}/.bash_aliases)
+backup ~/.bash_aliases
+$(touch ~/.bash_aliases)
 
 # Install vundle (vim bundles manager)
 if [ -d ~/.vim/bundle/vundle ]
 then
   rm -rf ~/.vim/bundle/vundle
 fi
-git clone https://github.com/gmarik/vundle.git ${HOME}/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # Now it's time to isntall vim bundles
 vim -e +BundleInstall! +BundleClean +qa 2> /dev/null
+
+# Install sublime global config (if sublime installed)
+SUBLIME_CONFIG_DIR=~/.config/sublime-text-2/Packages/Default
+if [ -d $SUBLIME_CONFIG_DIR ]
+then
+  install ${DIR}/sublime/preferences.json ${SUBLIME_CONFIG_DIR}/Preferences.sublime-settings
+fi
