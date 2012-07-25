@@ -9,5 +9,5 @@ Dotfiles
 
 ## Installation
 
-  git clone https://github.com/fragphace/dotfiles.git ~/dotfiles
-  ~/dotfiles/install.sh
+	git clone https://github.com/fragphace/dotfiles.git ~/dotfiles
+	~/dotfiles/install.sh
