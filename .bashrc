@@ -22,6 +22,9 @@ shopt -s checkwinsize
 # Color prompt
 force_color_prompt=yes
 
+# Load colors
+eval $(dircolors -b ~/dotfiles/.dircolors)
+
 # Color aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -39,8 +42,3 @@ bws autocomplete
 alias du='du --apparent-size -h'
 alias reload='source ~/.bashrc'
 alias sublime='sublime-text'
-
-# Local aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
