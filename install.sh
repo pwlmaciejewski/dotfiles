@@ -3,6 +3,12 @@
 # Get dotfiles dir
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Handy pointers
+BASHRC=~/.bashrc
+VIMRC=~/.vimrc
+GITCONFIG=~/.gitconfig
+SUBLIME_CONFIG_DIR=~/.config/sublime-text-2/Packages/Default
+
 # Backup function checks if file exists and moves
 # it to a backup (eg. ~/.bashrc -> ~/.bashrc.old)
 function backup {
@@ -15,18 +21,24 @@ function backup {
 # Install function takes two arguments. First is
 # the file to install and the second is destination.
 # If destination already exists it will be backed up.
-function install {
+function link {
   backup $2
   $(ln -s $1 $2)
 }
 
-# Install rc files
-install ${DIR}/.bashrc ~/.bashrc
-install ${DIR}/.vimrc ~/.vimrc
+# Install bashrc
+backup $BASHRC
+echo "# Don't delete this line" >> $BASHRC
+echo -e "source ${DIR}/.bashrc\n" >> $BASHRC
 
-# Backup & create bash_aliases
-backup ~/.bash_aliases
-$(touch ~/.bash_aliases)
+# Install vimrc
+backup $VIMRC
+echo "\" Don't delete this line" >> $VIMRC
+echo -e "source $DIR/.vimrc\n" >> $VIMRC
+
+# Install gitconfig
+link ${DIR}/.gitconfig $GITCONFIG
+exit
 
 # Install vundle (vim bundles manager)
 if [ -d ~/.vim/bundle/vundle ]
@@ -35,12 +47,12 @@ then
 fi
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-# Now it's time to isntall vim bundles
+# Now it's time to install vim bundles
 vim -e +BundleInstall! +BundleClean +qa 2> /dev/null
 
+
 # Install sublime global config (if sublime installed)
-SUBLIME_CONFIG_DIR=~/.config/sublime-text-2/Packages/Default
 if [ -d $SUBLIME_CONFIG_DIR ]
 then
-  install ${DIR}/sublime/preferences.json ${SUBLIME_CONFIG_DIR}/Preferences.sublime-settings
+  link ${DIR}/sublime/preferences.json ${SUBLIME_CONFIG_DIR}/Preferences.sublime-settings
 fi
