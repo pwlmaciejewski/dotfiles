@@ -1,0 +1,19 @@
+[ui]
+	color = true
+[color]
+	ui = true
+[user]
+	name = Pawel Maciejewski
+	email = fragphace@gmail.com
+[alias]
+  # Simple aliases
+  ci = commit
+  br = branch
+  bra = branch -avv
+  co = checkout
+  st = status
+  a = add -v
+  as = !git add -u && git status
+
+  # Sugar
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
