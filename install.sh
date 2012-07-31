@@ -31,14 +31,13 @@ backup $BASHRC
 echo "# Don't delete this line" >> $BASHRC
 echo -e "source ${DIR}/.bashrc\n" >> $BASHRC
 
+# Install gitconfig
+link ${DIR}/.gitconfig $GITCONFIG
+
 # Install vimrc
 backup $VIMRC
 echo "\" Don't delete this line" >> $VIMRC
 echo -e "source $DIR/.vimrc\n" >> $VIMRC
-
-# Install gitconfig
-link ${DIR}/.gitconfig $GITCONFIG
-exit
 
 # Install vundle (vim bundles manager)
 if [ -d ~/.vim/bundle/vundle ]
