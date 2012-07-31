@@ -55,3 +55,6 @@ if [ -d $SUBLIME_CONFIG_DIR ]
 then
   link ${DIR}/sublime/preferences.json ${SUBLIME_CONFIG_DIR}/Preferences.sublime-settings
 fi
+
+# Lat thing we need is to reload bashrc
+source $BASHRC
