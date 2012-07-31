@@ -10,4 +10,4 @@ Dotfiles
 ## Installation
 
 	git clone https://github.com/fragphace/dotfiles.git ~/dotfiles
-	~/dotfiles/install.sh
+	~/dotfiles/install.sh && source ~/.bashrc
