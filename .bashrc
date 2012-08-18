@@ -45,3 +45,9 @@ alias sublime='sublime-text'
 alias ed="vim . "
 alias ged="sublime-text . &"
 alias tweets='twidge lsrecent -su'
+alias df='df -h'
+
+# BWS CD. Changes project and gets to it's root
+function bwscd() {
+  bws cw $@ && bws cd
+}
