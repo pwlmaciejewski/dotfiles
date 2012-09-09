@@ -46,9 +46,9 @@ alias ed="vim . "
 alias ged="sublime-text . &"
 alias tweets='twidge lsrecent -su'
 alias df='df -h'
-alias l='tree -L 1'
-alias ll='tree -L 2'
-alias lll='tree -L 3'
+alias l='tree --dirsfirst -L 1'
+alias ll='l -L 2'
+alias lll='ll -L 3'
 
 # BWS CD. Changes project and gets to it's root
 function bwscd() {
