@@ -46,7 +46,7 @@ alias ed="vim . "
 alias ged="sublime-text . &"
 alias tweets='twidge lsrecent -su'
 alias df='df -h'
-alias l='tree --dirsfirst -L 1'
+alias l='tree --dirsfirst --noreport -L 1'
 alias ll='l -L 2'
 alias lll='ll -L 3'
 
