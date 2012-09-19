@@ -5,6 +5,8 @@
 [user]
 	name = Pawel Maciejewski
 	email = fragphace@gmail.com
+[push]
+  default = current
 [alias]
   # Simple aliases
   ci = commit
