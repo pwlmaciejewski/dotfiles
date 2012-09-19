@@ -11,9 +11,10 @@
   br = branch
   bra = branch -avv
   co = checkout
-  st = status
-  a = add -v
-  as = !git add -u && git status
+  s = status -s
+  st = status 
+  a = add -v .
+  as = !git add . && git status
 
   # Sugar
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
