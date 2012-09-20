@@ -2,9 +2,6 @@
 	color = true
 [color]
 	ui = true
-[user]
-	name = Pawel Maciejewski
-	email = fragphace@gmail.com
 [push]
   default = current
 [alias]
