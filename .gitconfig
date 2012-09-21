@@ -16,5 +16,8 @@
   as = !git add . && git status
   l = !git --no-pager lg -n 10 && echo ""
 
+  # Shows unmerged paths
+  unmerged = !git --no-pager diff --name-only --diff-filter=U
+
   # Sugar
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr%Creset %Cblue%cn%Creset' --abbrev-commit --date=relative
