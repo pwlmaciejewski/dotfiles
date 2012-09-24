@@ -7,15 +7,17 @@
 [merge]
   tool = vimdiff
 [alias]
-  # Simple aliases
+  # Shorthands
   ci = commit
   br = branch
-  bra = branch -avv
   co = checkout
-  s = status -s .
   st = status 
+  
+  # Lovely oneliners
+  bra = branch -avv
+  s = status -s .
   a = add -v .
-  as = !git add . && git status
+  as = !git add . && git status -s
   l = !git --no-pager lg -n 10 && echo ""
 
   # Relative diff with status (useful during resolving conflicts)
