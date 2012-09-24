@@ -40,6 +40,7 @@ bws autocomplete
 
 # Aliases
 alias du='du --apparent-size -h'
+alias d='du --max-depth=1 *'
 alias reload='source ~/.bashrc'
 alias sublime='sublime-text'
 alias ed="vim . "
