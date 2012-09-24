@@ -4,6 +4,8 @@
 	ui = true
 [push]
   default = current
+[merge]
+  tool = vimdiff
 [alias]
   # Simple aliases
   ci = commit
@@ -16,8 +18,9 @@
   as = !git add . && git status
   l = !git --no-pager lg -n 10 && echo ""
 
-  # Shows unmerged paths
-  unmerged = !git --no-pager diff --name-only --diff-filter=U
+  # Relative diff with status (useful during resolving conflicts)
+  d = diff --name-status --relative
+  du = diff --name-only --relative --diff-filter=U
 
   # Sugar
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr%Creset %Cblue%cn%Creset' --abbrev-commit --date=relative
