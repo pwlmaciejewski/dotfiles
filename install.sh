@@ -8,11 +8,12 @@ BASHRC=~/.bashrc
 VIMRC=~/.vimrc
 GITCONFIG=~/.gitconfig
 SUBLIME_CONFIG_DIR=~/.config/sublime-text-2/Packages/Default
+GRUNT=~/.grunt
 
 # Backup function checks if file exists and moves
 # it to a backup (eg. ~/.bashrc -> ~/.bashrc.old)
 function backup {
-  if [ -f $1 ]
+  if [ -e $1 ]
   then
     $(mv $1 $(dirname $1)/$(basename $1).old)
   fi
@@ -25,6 +26,9 @@ function link {
   backup $2
   $(ln -s $1 $2)
 }
+
+# Install grunt
+link ${DIR}/.grunt $GRUNT
 
 # Install bashrc
 backup $BASHRC
