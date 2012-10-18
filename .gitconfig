@@ -24,5 +24,8 @@
   d = diff --name-status --relative
   du = diff --name-only --relative --diff-filter=U
 
+  # Remove all deleted files
+  rmf = !git s --porcelain | grep 'D' --color=never | sed 's/ D //' | xargs git rm
+
   # Sugar
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr%Creset %Cblue%cn%Creset' --abbrev-commit --date=relative
