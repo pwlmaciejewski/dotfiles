@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     watch: {
       coffee: {
         files: '<config:coffee.all.src>',
-        tasks: 'coffee'
+        tasks: 'coffeeReset'
       }
     },
 
@@ -16,6 +16,11 @@ module.exports = function(grunt) {
         src: ['lib/**/*.coffee', 'test/**/*.coffee'],
         dest: '<%= grunt.task.current.target %>'
       }
+    },
+
+    rm: {
+      libjs: 'lib/**/*.js',
+      testjs: 'test/**/test*.js'
     },
 
     exec: {
@@ -29,7 +34,9 @@ module.exports = function(grunt) {
   // External tasks
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-coffee');
+  grunt.loadNpmTasks('grunt-rm');
 
   // Tasks
   grunt.registerTask('test', 'exec:buster');
+  grunt.registerTask('coffeeReset', 'rm coffee');
 };

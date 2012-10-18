@@ -40,7 +40,8 @@ exports.template = function(grunt, init, done) {
     props.devDependencies = {
         'buster': '*',
         'grunt-exec': '*',
-        'grunt-coffee': '*'
+        'grunt-coffee': '*',
+        'grunt-rm': '*'
     };
 
     // Files to copy (and process).
