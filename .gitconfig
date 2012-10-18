@@ -19,6 +19,7 @@
   a = add -v .
   as = !git add . && git status -s
   l = !git --no-pager lg -n 10 && echo ""
+  ch = commit -c HEAD
 
   # Relative diff with status (useful during resolving conflicts)
   d = diff --name-status --relative
