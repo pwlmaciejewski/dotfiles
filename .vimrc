@@ -45,3 +45,6 @@ set nowritebackup
 " Terminal colorscheme
 set t_Co=256  " Force 256 colors
 colorscheme molokai
+
+" Coffeescript filetype
+au BufRead,BufNewFile *.coffee set filetype=coffee 
