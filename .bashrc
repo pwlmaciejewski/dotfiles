@@ -37,6 +37,7 @@ PS1='\W$ '
 # Scripts
 alias bws='source ~/dotfiles/scripts/workspace.sh'
 bws autocomplete
+. ~/dotfiles/scripts/z.sh
 
 # Aliases
 alias du='du --apparent-size -h'
