@@ -6,13 +6,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles
-Bundle 'Command-T'
-Bundle 'twilight'
-Bundle 'twilight256.vim'
+Bundle 'molokai'
 Bundle 'pangloss/vim-javascript'
 Bundle 'The-NERD-tree'
 nmap <silent> <F2> :NERDTreeToggle<cr>
 nmap <silent> <Leader>r :NERDTreeFind<cr>
+Bundle 'vim-coffee-script'
 
 " Tabs and spaces stuff.
 set shiftwidth=2
@@ -45,20 +44,7 @@ set nowritebackup
 
 " Terminal colorscheme
 set t_Co=256  " Force 256 colors
-colorscheme twilight256
+colorscheme molokai
 
-" GUI specific options
-if has('gui_running')
-  " Highlight current line.
-  set cursorline
-
-  " Change color scheme
-  colorscheme twilight
-
-  " Font
-  set guifont=Ubuntu\ Mono\ 15
-
-  " Remove menu bar
-  set guioptions-=m
-  set guioptions-=T
-endif
+" Coffeescript filetype
+au BufRead,BufNewFile *.coffee set filetype=coffee 
