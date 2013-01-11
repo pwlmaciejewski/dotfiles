@@ -40,6 +40,7 @@ bws autocomplete
 . ~/dotfiles/scripts/z.sh
 
 # Aliases
+alias o='gnome-open'
 alias du='du --apparent-size -h'
 alias d='du --max-depth=0 *'
 alias reload='source ~/.bashrc'
