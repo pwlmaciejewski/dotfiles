@@ -14,9 +14,12 @@ nmap <silent> <Leader>r :NERDTreeFind<cr>
 Bundle 'vim-coffee-script'
 
 " Tabs and spaces stuff.
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
+set softtabstop=4
+set listchars=tab:>-,trail:-
+set list
 
 " Folding.
 set foldmethod=indent  " Oops, Need to tidy up my files
