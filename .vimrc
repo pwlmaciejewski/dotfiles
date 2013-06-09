@@ -21,10 +21,6 @@ set softtabstop=4
 set listchars=tab:>-,trail:-
 set list
 
-" Folding.
-set foldmethod=indent  " Oops, Need to tidy up my files
-set foldlevelstart=9999
-
 " Search
 set hlsearch  " highlight results
 set incsearch  " increment search
