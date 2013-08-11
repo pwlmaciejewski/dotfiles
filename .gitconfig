@@ -34,3 +34,6 @@
 
   # List branches in last commit date order
   latest = !git for-each-ref --sort=-committerdate --shell --format='echo -e \"\\e[0031m\" %(refname:short) \"\\e[00m\\e[0032m\" %(committerdate:relative) \"\\e[00m\\e[0034m\" %(committername) \"\\e[00m\"' refs/heads/ refs/remotes | bash  
+[user]
+	name = fragphace
+	email = fragphace@gmail.com
