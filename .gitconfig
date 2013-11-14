@@ -21,6 +21,7 @@
   l = !git --no-pager lg -n 10 && echo ""
   ch = commit -c HEAD
   pp = !git pull && git push
+  ds = diff --staged
 
   # Relative diff with status (useful during resolving conflicts)
   d = diff --name-status --relative
