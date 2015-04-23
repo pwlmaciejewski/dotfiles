@@ -35,6 +35,10 @@
 
   # List branches in last commit date order
   latest = !git for-each-ref --sort=-committerdate --shell --format='echo -e \"\\e[0031m\" %(refname:short) \"\\e[00m\\e[0032m\" %(committerdate:relative) \"\\e[00m\\e[0034m\" %(committername) \"\\e[00m\"' refs/heads/ refs/remotes | bash  
+
+  # JS Hint all changes
+  shint = !git s | awk '{ print $2 }' | xargs jshint
+
 [user]
-	name = fragphace
-	email = fragphace@gmail.com
+	name = "Paweł Maciejewski"
+	email = pwlmaciejewski@gmail.com
