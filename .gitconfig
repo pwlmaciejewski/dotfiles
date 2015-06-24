@@ -39,6 +39,9 @@
   # JS Hint all changes
   shint = !git s | awk '{ print $2 }' | grep '.js$' | xargs jshint
 
+  # Delete all branches with "/" in it (it will leave branches like master and development)
+  brclean = !git br | grep '.*/.*' | xargs git br -d 
+
 [user]
 	name = "Paweł Maciejewski"
 	email = pwlmaciejewski@gmail.com
