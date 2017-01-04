@@ -32,7 +32,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # PS1
-PS1='\W$ '
+PS1='\[\033[0;32m\]\W\[\033[0;37m\] $ '
 
 # Scripts
 alias bws='source ~/dotfiles/scripts/workspace.sh'
