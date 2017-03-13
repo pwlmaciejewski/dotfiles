@@ -31,8 +31,13 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Parse git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # PS1
-PS1='\[\033[0;32m\]\W\[\033[0;37m\] $ '
+PS1="\[\033[0;32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[0;37m\] $ "
 
 # Scripts
 alias bws='source ~/dotfiles/scripts/workspace.sh'
