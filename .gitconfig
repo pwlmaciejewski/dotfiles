@@ -11,8 +11,8 @@
   ci = commit
   br = branch
   co = checkout
-  st = status 
-  
+  st = status
+
   # Lovely oneliners
   bra = branch -avv
   s = status -s .
@@ -34,14 +34,14 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr%Creset %Cblue%cn%Creset' --abbrev-commit --date=relative
 
   # List branches in last commit date order
-  latest = !git for-each-ref --sort=-committerdate --shell --format='echo -e \"\\e[0031m\" %(refname:short) \"\\e[00m\\e[0032m\" %(committerdate:relative) \"\\e[00m\\e[0034m\" %(committername) \"\\e[00m\"' refs/heads/ refs/remotes | bash  
+  latest = !git for-each-ref --sort=-committerdate --shell --format='echo -e \"\\e[0031m\" %(refname:short) \"\\e[00m\\e[0032m\" %(committerdate:relative) \"\\e[00m\\e[0034m\" %(committername) \"\\e[00m\"' refs/heads/ refs/remotes | bash
 
   # Delete all branches with "/" in it (it will leave branches like master and development)
-  brclean = !git br | grep '.*/.*' | xargs git br -d 
+  brclean = !git br | grep '.*/.*' | xargs git br -d
 
 
   # Create new branch (it changes whitespace to _ automatically)
-  brcreate = !"f() { echo $@ | sed -e 's/\\s/_/g' | xargs git co -b; }; f"
+  brcreate = !"f() { echo $@ | sed -e 's/\\s/_/g' | sed  -e 's/://g' | xargs git co -b; }; f"
 
 
 [user]
