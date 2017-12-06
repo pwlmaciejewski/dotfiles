@@ -41,7 +41,7 @@
 
 
   # Create new branch (it changes whitespace to _ automatically)
-  brcreate = !"f() { echo $@ | sed -e 's/\\s/_/g' | sed  -e 's/://g' | xargs git co -b; }; f"
+  brnew = !"f() { echo $@ | sed -e 's/\\s/_/g' | sed  -e 's/://g' | xargs git co -b; }; f"
 
 
 [user]
@@ -49,3 +49,4 @@
 	email = pawel.maciejewski@sony.com
 [core]
 	excludesfile = ~/.gitignore
+    editor = vim 

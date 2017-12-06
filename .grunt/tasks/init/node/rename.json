@@ -1,6 +1,0 @@
-{
-  "lib/name.js": false,
-  "lib/name.coffee": "lib/{%= name %}.coffee",
-  "test/name_test.js": false,
-  "test/testName.coffee": "test/test{%= name.charAt(0).toUpperCase() + name.slice(1) %}.coffee"
-}

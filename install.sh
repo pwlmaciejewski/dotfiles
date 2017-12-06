@@ -27,9 +27,6 @@ function link {
   $(ln -s $1 $2)
 }
 
-# Install grunt
-link ${DIR}/.grunt $GRUNT
-
 # Install bashrc
 backup $BASHRC
 echo "# Don't delete this line" >> $BASHRC
@@ -52,11 +49,3 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # Now it's time to install vim bundles
 vim -e +BundleInstall! +BundleClean +qa 2> /dev/null
-
-
-# Install sublime global config (if sublime installed)
-if [ -d $SUBLIME_CONFIG_DIR ]
-then
-  link ${DIR}/sublime/preferences.json ${SUBLIME_CONFIG_DIR}/Preferences.sublime-settings
-fi
-
