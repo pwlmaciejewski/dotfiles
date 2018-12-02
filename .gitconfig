@@ -46,7 +46,7 @@
 
 [user]
 	name = "Paweł Maciejewski"
-	email = pawel.maciejewski@sony.com
+	email = 1276139+pwlmaciejewski@users.noreply.github.com
 [core]
 	excludesfile = ~/.gitignore
     editor = vim 
