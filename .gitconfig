@@ -38,15 +38,14 @@
 
   # Delete all branches with "/" in it (it will leave branches like master and development)
   brclean = !git br | grep '.*/.*' | xargs git br -d
-
-
+  
   # Create new branch (it changes whitespace to _ automatically)
-  brnew = !"f() { echo $@ | sed -e 's/\\s/_/g' | sed  -e 's/://g' | xargs git co -b; }; f"
-
+  # Requires branch-safe-name: https://github.com/pwlmaciejewski/branch-safe-name
+  brnew = !"f() { branch-safe-name -l pm/$@ | xargs git co -b; }; f"
 
 [user]
-	name = "Paweł Maciejewski"
-	email = 1276139+pwlmaciejewski@users.noreply.github.com
+  name = "Paweł Maciejewski"
+  email = 1276139+pwlmaciejewski@users.noreply.github.com
 [core]
-	excludesfile = ~/.gitignore
-    editor = vim 
+  excludesfile = ~/.gitignore
+  editor = vim 
