@@ -1,7 +1,7 @@
 [ui]
-	color = true
+  color = true
 [color]
-	ui = true
+  ui = true
 [push]
   default = current
 [merge]
@@ -48,4 +48,4 @@
   email = 1276139+pwlmaciejewski@users.noreply.github.com
 [core]
   excludesfile = ~/.gitignore
-  editor = vim 
+  editor = micro
